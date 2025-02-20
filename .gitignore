@@ -1,0 +1,23 @@
+# Byte-compiled / Cached files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+voiceassistant/
+
+# Ignore temp files
+temp.mp3
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and IDE-specific files
+*.log
+.vscode/
+.idea/
+*.swp
+
+# Ignore environment variables (if any)
+.env
