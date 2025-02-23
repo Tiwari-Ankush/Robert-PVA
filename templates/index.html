@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Sticky Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Sticky Footer */
+        footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 15px;
+            position: sticky;
+            bottom: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        footer a {
+            color: #d6f10b;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                text-align: left;
+                gap: 5px;
+            }
+        }
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Project Description */
+        .project-description {
+            margin-bottom: 40px;
+        }
+
+        .project-description h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .project-description p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Main Project Section */
+        .main-project {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-project h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        /* Input and Buttons */
+        .form-control {
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #1e3c72;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2a5298;
+        }
+
+        .btn-danger {
+            background-color: #ff4d4d;
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background-color: #cc0000;
+        }
+
+        /* Response Area */
+        #response {
+            margin-top: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Available Commands Section */
+        .available-commands {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .available-commands h2 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+
+        .available-commands ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .available-commands li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .project-description h2,
+            .main-project h2,
+            .available-commands h2 {
+                font-size: 22px;
+            }
+
+            .project-description p,
+            .available-commands li {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <h1>Robert - Personal Assistant</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Project Description -->
+        <section class="project-description">
+            <h2>About Robert</h2>
+            <p>
+                Robert is a personal assistant designed to make your life easier. With Robert, you can perform various tasks such as playing music, fetching the latest news, checking the weather, and much more. Built with Python and powered by Flask, Robert is your go-to assistant for everyday tasks.
+            </p>
+            <p>
+                This project is a testament to the power of modern technology and creativity. Whether you're a developer or a tech enthusiast, Robert is here to assist you in your daily life.
+            </p>
+        </section>
+
+        <!-- Main Project Section -->
+        <section class="main-project">
+            <h2>Interact with Robert</h2>
+            <div class="mb-3">
+                <input type="text" id="commandInput" class="form-control" placeholder="Enter your command">
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" onclick="sendCommand()">Send Command</button>
+                <button class="btn btn-danger" onclick="clearHistory()">Clear History</button>
+            </div>
+            <div id="response" class="mt-4">
+                <p><strong>Robert:</strong> Ready to assist you!</p>
+            </div>
+        </section>
+
+        <!-- Available Commands Section -->
+        <section class="available-commands">
+            <h2>Available Commands</h2>
+            <ul>
+                <li>Play [song name] - Play a specific song.</li>
+                <li>What's the weather? - Get the current weather.</li>
+                <li>Open [website] - Open a website (e.g., Open Google).</li>
+                <li>Take notes - Save and open a note.</li>
+                <li>Set volume [percentage] - Set system volume.</li>
+                <li>Set brightness [percentage] - Set screen brightness.</li>
+                <li>Breaking news - Fetch the latest news.</li>
+                <li>Shutdown/Restart/Lock/Sleep - Control your system.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Sticky Footer -->
+    <footer>
+        <p>&copy; 2025 Robert &mid; All rights reserved.</p>
+        <p>Created by <a href="https://www.ankushtiwari.me" target="_blank">Ankush Tiwari</a></p>
+    </footer>
+
+    <script>
+        // Function to send text command
+        function sendCommand() {
+            const command = document.getElementById('commandInput').value;
+            if (!command) {
+                alert("Please enter a command.");
+                return;
+            }
+
+            // Display the user's command
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML += `<p><strong>You:</strong> ${command}</p>`;
+
+            // Send the command to the server
+            fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ command: command }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Display Robert's response
+                responseDiv.innerHTML += `<p><strong>Robert:</strong> ${data.message}</p>`;
+                responseDiv.scrollTop = responseDiv.scrollHeight; // Auto-scroll to the latest response
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                responseDiv.innerHTML += `<p><strong>Error:</strong> Failed to process the command.</p>`;
+            });
+
+            // Clear the input field
+            document.getElementById('commandInput').value = '';
+        }
+
+        // Function to clear the response history
+        function clearHistory() {
+            const responseDiv = document.getElementById('response');
+            responseDiv.innerHTML = `<p><strong>Robert:</strong> Ready to assist you!</p>`;
+        }
+    </script>
+
+    <!-- Bootstrap JS (Optional, for advanced features) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
